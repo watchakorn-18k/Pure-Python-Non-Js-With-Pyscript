@@ -14,7 +14,7 @@ cd Pure-Python-Non-Js-With-Pyscript
 
 
 # Run
-- Open File `index.html` or 
+- Open File `index.html` or [Open Link](https://watchakorn-18k.github.io/Pure-Python-Non-Js-With-Pyscript/)
 
 
 # main.py
@@ -119,4 +119,4 @@ name_user.addEventListener("keydown", pyodide.ffi.create_proxy(lambda e:welcome_
 </html>
 ```
 
-* Using javascript, just import pyscript with tailwindcss.*
+<b>Using javascript, just import pyscript with tailwindcss.<b/>
