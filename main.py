@@ -31,7 +31,7 @@ async def welcome_user(e):
     client_name.textContent = random.choice(list_text)
 
 def Golink(e):
-    js.window.location = 'main.py'
+    js.window.location = 'https://github.com/watchakorn-18k/Pure-Python-Non-Js-With-Pyscript'
 
 Btn_Click.addEventListener("click", pyodide.ffi.create_proxy(welcome_user))
 btn_source_code.addEventListener("click", pyodide.ffi.create_proxy(Golink))
