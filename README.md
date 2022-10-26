@@ -1,3 +1,6 @@
+<p align="center"><img src="https://media.discordapp.net/attachments/585069498986397707/1034910530336460910/rtset.gif">
+</p>
+
 # Pure Python Non Js With Pyscript
 Just use HTML + Pyscript + .PY
 
