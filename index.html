@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="set_title">PURE PYTHON NON JS</title>
+    <link rel="stylesheet" href="css/pyscript.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+
+    <py-config src="./config.toml"></py-config>
+</head>
+
+<body>
+    <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" id="set_title_nav">PURE PYTHON NON JS</a>
+  </div>
+  <!-- <div class="navbar-end">
+    <a class="btn">English</a>
+  </div> -->
+</div>
+    <py-script src="./main.py"> </py-script>
+    <div class="grid justify-items-center ...">
+        <div class="form-control w-full max-w-xs">
+            <label class="label">
+                <span class="label-text">What is your name?</span>
+                <span class="label-text-alt">Can <kbd class="kbd kbd-sm">Enter</kbd> to Submit</span>
+            </label>
+            <input type="text" placeholder="Enter your name" name="name_user"
+                class="input input-bordered w-full max-w-xs" />
+            <br>
+            <button class="btn btn-outline btn-success" id="submit">Submit</button>
+            <br>
+            <progress class="progress progress-success" value="0" max="100" id="progress_genarate_word"></progress>
+        </div>
+        <br>
+        <div class="card w-96 bg-primary shadow-xl" id="card-name" hidden>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">Welcome <p id="user_name_title"></p></h2>
+                <p id="client-name"></p>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
+    </div>
+    
+</body>
+
+<script src="js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>
