@@ -16,7 +16,6 @@ def refreshTime() -> str:
     S = datetime.now().strftime('%S')
 
     return H,M,S
-
 sec = js.document.getElementById("second")
 minte = js.document.getElementById("minute")
 hour = js.document.getElementById("hour")
