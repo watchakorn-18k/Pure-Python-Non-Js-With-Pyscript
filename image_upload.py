@@ -21,6 +21,11 @@ sec = js.document.getElementById("second")
 minte = js.document.getElementById("minute")
 hour = js.document.getElementById("hour")
 
+def go_to_source(e):
+    js.window.location = 'image_upload.py'
+
+btn_source_code = js.document.getElementById("btn_source_code").addEventListener('click',pyodide.ffi.create_proxy(go_to_source))
+
 
 async def run():
     while True:
