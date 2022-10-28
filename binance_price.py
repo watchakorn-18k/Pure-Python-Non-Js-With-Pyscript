@@ -21,8 +21,11 @@ data = await response.json()
 data_all = data.copy()
 data_all = data_all[:100]
 
+def go_to(e):
+    js.window.location = 'binance_price.py'
 name = js.document.getElementById("name")
 card = js.document.getElementById("card_all")
+btn_soruce_code = js.document.getElementById("btn_source_code").addEventListener('click',pyodide.ffi.create_proxy(go_to))
 for i in data_all:
     if float(i['lastPrice']) > 0 :
         card.innerHTML += f"""
