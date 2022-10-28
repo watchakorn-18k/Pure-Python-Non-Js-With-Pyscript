@@ -60,7 +60,7 @@ name_user.addEventListener("keydown", pyodide.ffi.create_proxy(lambda e:welcome_
 ```
 
 # index.html
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

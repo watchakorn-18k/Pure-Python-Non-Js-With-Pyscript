@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="set_title">PURE PYTHON NON JS</title>
+    <link rel="stylesheet" href="css/pyscript.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+
+    <py-env>
+        - paths:
+            - /layout.py
+    </py-env>
+    <py-config src="./config.toml"></py-config>
+</head>
+
+<body>
+    <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+        <div class="drawer-content flex flex-col">
+          <!-- Navbar -->
+          <div class="w-full navbar bg-base-300">
+            <div class="flex-none lg:hidden">
+              <label for="my-drawer-3" class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+              </label>
+            </div> 
+            <div class="flex-1 px-2 mx-2"><a href="index.html">PURE PYTHON NON JS 💪🏻</a></div>
+            <div class="flex-none hidden lg:block">
+              <ul class="menu menu-horizontal">
+                <!-- Navbar menu content here -->
+              </ul>
+            </div>
+          </div>
+          <div class="grid justify-items-center ...">
+            <div class="hero">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Clock</h1>
+                    <br>
+                    <div class="form-control w-full max-w-xs">
+                        <p id="time"></p>
+                        <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span class="countdown font-mono text-5xl">
+                                <span id="hour" ></span>
+                              </span>
+                              hours
+                            </div> 
+                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span class="countdown font-mono text-5xl">
+                                <span id="minute" ></span>
+                              </span>
+                              min
+                            </div> 
+                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span class="countdown font-mono text-5xl">
+                                <span id="second" ></span>
+                              </span>
+                              sec
+                            </div>
+                          </div>
+                        <br>
+                    </div>
+                    <br>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
+                    <br>
+                    <img id="output"/>
+                  </div>
+                </div>
+            </div>
+            
+           
+            <br>
+            
+            <br>
+            
+        </div>
+        </div> 
+        <div class="drawer-side">
+          <label for="my-drawer-3" class="drawer-overlay"></label> 
+          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
+            <!-- Sidebar content here -->
+            
+          </ul>
+          
+        </div>
+      </div>
+    <py-script src="./image_upload.py"> </py-script>
+   
+    
+</body>
+
+<script src="js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>
