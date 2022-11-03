@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="set_title">PURE PYTHON NON JS</title>
-    <link rel="stylesheet" href="css/pyscript.css">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-
+  <head id="header">
+    <py-config src="../config.toml"></py-config>
     <py-env>
         - paths:
-            - layout.py
+            - layouts.py
     </py-env>
-    <py-config src="./config.toml"></py-config>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/pyscript.css">
+    <py-script src="./clock.py"> </py-script>
 </head>
-
+<script src="../js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <body>
     <div class="drawer">
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
@@ -72,12 +67,8 @@
                   </div>
                 </div>
             </div>
-            
-           
             <br>
-            
             <br>
-            
         </div>
         </div> 
         <div class="drawer-side">
@@ -89,12 +80,5 @@
           
         </div>
       </div>
-    <py-script src="./clock.py"> </py-script>
-   
-    
 </body>
-
-<script src="js/pyscript.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-
 </html>

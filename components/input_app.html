@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title id="set_title">PURE PYTHON NON JS</title>
-        <link rel="stylesheet" href="css/pyscript.css">
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-        <py-config src="./config.toml"></py-config>
-        <py-env>
-            - paths:
-                - layout.py
-        </py-env>
-        <py-script src="./binance_price.py"> </py-script>
-    </head>
+<head id="header">
+    <py-config src="../config.toml"></py-config>
+    <py-env>
+        - paths:
+            - layouts.py
+    </py-env>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/pyscript.css">
+    <py-script src="./input_app.py"> </py-script>
+</head>
+<script src="../js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <body>
     <div class="drawer">
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
@@ -39,13 +36,28 @@
             <div class="hero">
                 <div class="hero-content text-center">
                   <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Binance Price</h1>
+                    <h1 class="text-5xl font-bold">Input App</h1>
                   </div>
                 </div>
             </div>
-            <div class="grid justify-items-center ... ">
-                <div class="grid lg:grid-cols-2 lg:gap-4 text-center content-between sm:grid-cols-1 sm:gap-36" id="card_all">
-        
+            
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">What is your name?</span>
+                    <span class="label-text-alt">Can <kbd class="kbd kbd-sm">Enter</kbd> to Submit</span>
+                </label>
+                <input type="text" placeholder="Enter your name" name="name_user"
+                    class="input input-bordered w-full max-w-xs" />
+                <br>
+                <button class="btn btn-outline btn-success" id="submit">Submit</button>
+                <br>
+                <progress class="progress progress-success" value="0" max="100" id="progress_genarate_word"></progress>
+            </div>
+            <br>
+            <div class="card w-96 bg-primary shadow-xl" id="card-name" hidden>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Welcome <p id="user_name_title"></p></h2>
+                    <p id="client-name"></p>
                 </div>
             </div>
             <br>
@@ -56,18 +68,8 @@
           <label for="my-drawer-3" class="drawer-overlay"></label> 
           <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
             <!-- Sidebar content here -->
-          </ul>
-          
+          </ul>      
         </div>
       </div>
-    
-    
-
-
-
-    
 </body>
-
-<script src="js/pyscript.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
 </html>

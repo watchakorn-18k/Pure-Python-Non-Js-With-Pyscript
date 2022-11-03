@@ -4,8 +4,8 @@ from datetime import datetime
 import pyodide
 import random
 import asyncio
-from layout import *
-  
+from layouts import *
+header()
 menu()
 
 timeDisplay = js.document.getElementById("time");

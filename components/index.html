@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header">
+    <py-config src="../config.toml"></py-config>
+    <py-env>
+        - paths:
+            - layouts.py
+    </py-env>
+    <py-script src="./index.py"> </py-script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/pyscript.css">
+</head>
+<script src="../js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<body>
+  <div id="main" class="drawer">
+    <div class="drawer-side" id="start-slide">
+      <label for="my-drawer-3" class="drawer-overlay"></label> 
+      <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
+        <!-- Sidebar content here -->
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

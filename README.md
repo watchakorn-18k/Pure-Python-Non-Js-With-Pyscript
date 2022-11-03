@@ -1,4 +1,4 @@
-<p align="center"><img src="https://media.discordapp.net/attachments/585069498986397707/1034910530336460910/rtset.gif">
+<p align="center"><img src="https://media.discordapp.net/attachments/581018943041306641/1037724522859737199/less_js.gif?width=494&height=658">
 </p>
 
 # Pure Python Non Js With Pyscript
@@ -12,12 +12,11 @@ cd Pure-Python-Non-Js-With-Pyscript
 ```
 
 
-
 # Run
 - Open File `index.html` or [Open Link](https://watchakorn-18k.github.io/Pure-Python-Non-Js-With-Pyscript/)
 
 
-# main.py
+## components/input_app.py
 ```py
 import js
 import pyodide
@@ -59,63 +58,82 @@ btn_source_code.addEventListener("click", pyodide.ffi.create_proxy(Golink))
 name_user.addEventListener("keydown", pyodide.ffi.create_proxy(lambda e:welcome_user(e) if e.key == "Enter" else None))
 ```
 
-# index.html
+## components/input_app.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="set_title">PURE PYTHON NON JS</title>
-    <link rel="stylesheet" href="css/pyscript.css">
+<head id="header">
+    <py-config src="../config.toml"></py-config>
+    <py-env>
+        - paths:
+            - layouts.py
+    </py-env>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-
-
-    <py-config src="./config.toml"></py-config>
+    <link rel="stylesheet" href="../css/pyscript.css">
+    <py-script src="./input_app.py"> </py-script>
 </head>
-
-<body>
-    <div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl" id="set_title_nav">PURE PYTHON NON JS</a>
-  </div>
-  <!-- <div class="navbar-end">
-    <a class="btn">English</a>
-  </div> -->
-</div>
-    <py-script src="./main.py"> </py-script>
-    <div class="grid justify-items-center ...">
-        <div class="form-control w-full max-w-xs">
-            <label class="label">
-                <span class="label-text">What is your name?</span>
-                <span class="label-text-alt">Can <kbd class="kbd kbd-sm">Enter</kbd> to Submit</span>
-            </label>
-            <input type="text" placeholder="Enter your name" name="name_user"
-                class="input input-bordered w-full max-w-xs" />
-            <br>
-            <button class="btn btn-outline btn-success" id="submit">Submit</button>
-            <br>
-            <progress class="progress progress-success" value="0" max="100" id="progress_genarate_word"></progress>
-        </div>
-        <br>
-        <div class="card w-96 bg-primary shadow-xl" id="card-name" hidden>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">Welcome <p id="user_name_title"></p></h2>
-                <p id="client-name"></p>
-            </div>
-        </div>
-        <br>
-        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
-    </div>
-    
-</body>
-
-<script src="js/pyscript.js"></script>
+<script src="../js/pyscript.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-
+<body>
+    <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+        <div class="drawer-content flex flex-col">
+          <!-- Navbar -->
+          <div class="w-full navbar bg-base-300">
+            <div class="flex-none">
+              <label for="my-drawer-3" class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+              </label>
+            </div> 
+            <div class="flex-1 px-2 mx-2"><a href="index.html" id="set_title_nav">PURE PYTHON NON JS 💪🏻</a></div>
+            <div class="flex-none hidden lg:block">
+              <ul class="menu menu-horizontal">
+                <!-- Navbar menu content here -->
+              </ul>
+            </div>
+          </div>
+          <!-- Page content here -->
+          
+          <div class="grid justify-items-center ...">
+            <div class="hero">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Input App</h1>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">What is your name?</span>
+                    <span class="label-text-alt">Can <kbd class="kbd kbd-sm">Enter</kbd> to Submit</span>
+                </label>
+                <input type="text" placeholder="Enter your name" name="name_user"
+                    class="input input-bordered w-full max-w-xs" />
+                <br>
+                <button class="btn btn-outline btn-success" id="submit">Submit</button>
+                <br>
+                <progress class="progress progress-success" value="0" max="100" id="progress_genarate_word"></progress>
+            </div>
+            <br>
+            <div class="card w-96 bg-primary shadow-xl" id="card-name" hidden>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Welcome <p id="user_name_title"></p></h2>
+                    <p id="client-name"></p>
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
+        </div>
+        </div> 
+        <div class="drawer-side">
+          <label for="my-drawer-3" class="drawer-overlay"></label> 
+          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
+            <!-- Sidebar content here -->
+          </ul>      
+        </div>
+      </div>
+</body>
 </html>
 ```
 

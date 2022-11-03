@@ -2,9 +2,10 @@ import pyodide
 from pyodide.http import pyfetch
 import js
 import asyncio
-from layout import *
-
+from layouts import *
+header()
 menu()
+
 
 url = "https://binance43.p.rapidapi.com/ticker/24hr"
 

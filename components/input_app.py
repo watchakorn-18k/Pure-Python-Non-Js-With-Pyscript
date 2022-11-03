@@ -2,8 +2,8 @@ import js
 import pyodide
 import random
 import asyncio
-from layout import *
-  
+from layouts import *
+header()
 menu()
   
 list_title = ["PURE PYTHON NON JS","ONLY PYTHON","LESS JS","WK18K","JUST WEB"]
