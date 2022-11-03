@@ -9,6 +9,7 @@ def menu():
     menu_all.innerHTML += "<li><a href='clock.html'>Clock</a></li>"
     menu_all.innerHTML += "<li><a href='binance_price.html'>Binance Price</a></li>"
     menu_all.innerHTML += "<li><a href='ascii.html'>ASCII</a></li>"
+    menu_all.innerHTML += "<li><a href='falling_snow.html'>Falling Snow</a></li>"
 
 
 def header():

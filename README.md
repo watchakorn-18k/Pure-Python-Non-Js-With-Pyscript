@@ -167,6 +167,10 @@ def header():
 
 [ASCII](https://watchakorn-18k.github.io/Pure-Python-Non-Js-With-Pyscript/components/ascii.html) : An example of an ASCII transformation that uses Python's built-in function `chr()` with `ord()` to demonstrate Python's capabilities.
 
+<p align="center"><img src="https://media.discordapp.net/attachments/581018943041306641/1037809745500831824/less_js.gif?width=350&height=658" width=40%></p>
+
+[Falling Snow](https://watchakorn-18k.github.io/Pure-Python-Non-Js-With-Pyscript/components/falling_snow.html) : An example of creating snow falling from the sky using basic python, either map() or using dict instead of array in JS by reference from [PasaComputer - Falling Snow | JavaScript 21 Days Challenge EP. 1 | สอน JavaScript เรียนรู้จากการลงมือทำ](https://youtu.be/oKY8tJLA5nU)
+
 
 # Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.

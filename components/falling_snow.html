@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header">
+    <py-config src="../config.toml"></py-config>
+    <py-env>
+        - paths:
+            - layouts.py
+    </py-env>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/pyscript.css">
+    <py-script src="./falling_snow.py"> </py-script>
+</head>
+<script src="../js/pyscript.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+        <div class="drawer-content flex flex-col">
+          <!-- Navbar -->
+          <div class="w-full navbar bg-base-300">
+            <div class="flex-none">
+              <label for="my-drawer-3" class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+              </label>
+            </div> 
+            <div class="flex-1 px-2 mx-2"><a href="index.html">PURE PYTHON NON JS 💪🏻</a></div>
+            <div class="flex-none hidden lg:block">
+              <ul class="menu menu-horizontal">
+                <!-- Navbar menu content here -->
+              </ul>
+            </div>
+          </div>
+          <div class="hero">
+            <div class="hero-content text-center">
+              <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Falling Snow</h1>
+              </div>
+            </div>
+        </div>
+          <canvas style="background-image: url(https://media.discordapp.net/attachments/581018943041306641/1037807173369069668/pexels-photomix-company-94842.jpg);background-repeat:no-repeat;
+          background-size:cover;
+          background-position:center;" id="falling-snow">
+
+          </canvas>
+          <div class="grid justify-items-center ...">
+            <br>
+            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
+            <br>
+        </div>
+        </div> 
+        <div class="drawer-side">
+          <label for="my-drawer-3" class="drawer-overlay"></label> 
+          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
+            <!-- Sidebar content here -->
+            
+          </ul>
+          
+        </div>
+      </div>
+</body>
+</html>
