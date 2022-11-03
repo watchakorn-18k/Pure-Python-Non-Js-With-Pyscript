@@ -8,7 +8,7 @@
     </py-env>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/pyscript.css">
-    <py-script src="./input_app.py"> </py-script>
+    <py-script src="./ascii.py"> </py-script>
 </head>
 <script src="../js/pyscript.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -23,53 +23,45 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
               </label>
             </div> 
-            <div class="flex-1 px-2 mx-2"><a href="index.html" id="set_title_nav">PURE PYTHON NON JS 💪🏻</a></div>
+            <div class="flex-1 px-2 mx-2"><a href="index.html">PURE PYTHON NON JS 💪🏻</a></div>
             <div class="flex-none hidden lg:block">
               <ul class="menu menu-horizontal">
                 <!-- Navbar menu content here -->
               </ul>
             </div>
           </div>
-          <!-- Page content here -->
-          
           <div class="grid justify-items-center ...">
             <div class="hero">
                 <div class="hero-content text-center">
                   <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Input App</h1>
+                    <h1 class="text-5xl font-bold">ASCII</h1>
                   </div>
                 </div>
             </div>
-            
             <div class="form-control w-full max-w-xs">
-                <label class="label">
-                    <span class="label-text">What is your name?</span>
-                </label>
-                <input type="text" placeholder="Enter your name" name="name_user"
-                    class="input input-bordered w-full max-w-xs" />
+                <input type="text" placeholder="Convert ASCII"  class="input input-bordered input-info" id="convert-ascii" />
                 <br>
-                <span class="label-text-alt">Can <kbd class="kbd kbd-sm">Enter</kbd> to Submit</span>
-                <br>
-                <button class="btn btn-outline btn-success" id="submit">Submit</button>
-                <br>
-                <progress class="progress progress-success" value="0" max="100" id="progress_genarate_word"></progress>
+                <span class="label-text-alt">Press <kbd class="kbd kbd-sm">Enter</kbd> to convert</span>
             </div>
+            
             <br>
-            <div class="card w-96 bg-primary shadow-xl" id="card-name" hidden>
+            <div class="card w-96 bg-primary shadow-xl" id="card-name">
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Welcome <p id="user_name_title"></p></h2>
-                    <p id="client-name"></p>
+                    <h2 class="card-title" id="result-char"></h2>
                 </div>
             </div>
             <br>
             <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" id="btn_source_code">SOURCE CODE</button>
+            <br>
         </div>
         </div> 
         <div class="drawer-side">
           <label for="my-drawer-3" class="drawer-overlay"></label> 
           <ul class="menu p-4 overflow-y-auto w-80 bg-base-100" id="menu_all">
             <!-- Sidebar content here -->
-          </ul>      
+            
+          </ul>
+          
         </div>
       </div>
 </body>

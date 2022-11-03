@@ -1,7 +1,4 @@
 import js
-import pyodide
-import random
-import asyncio
 from layouts import *
 
 header()

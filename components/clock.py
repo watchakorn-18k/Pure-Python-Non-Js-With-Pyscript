@@ -2,7 +2,6 @@ import os
 import js
 from datetime import datetime
 import pyodide
-import random
 import asyncio
 from layouts import *
 header()
